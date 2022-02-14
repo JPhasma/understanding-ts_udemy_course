@@ -1,3 +1,10 @@
+enum Activity {
+  SLEEP,
+  EAT,
+  CUDDLE,
+  PROTEST
+}
+
 const cat: {
   name: string;
   age: number;
@@ -11,9 +18,10 @@ const cat: {
 };
 
 console.log(cat);
+console.log('enum value', Activity.SLEEP); // logs enumerated value of 0
 
 // an example benefit of nkowing an array is all of one type is TS can then provide
-// many methods (eg: toUpperCase() ), as TS is expecting all elements of a strin arrayy to be strings
+// many methods (eg: toUpperCase() ), as TS is expecting all elements of a string arrayy to be strings
 // eg:
 console.log(
   cat.likes.map(like => {

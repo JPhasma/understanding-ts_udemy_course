@@ -1,3 +1,10 @@
+var Activity;
+(function (Activity) {
+    Activity[Activity["SLEEP"] = 0] = "SLEEP";
+    Activity[Activity["EAT"] = 1] = "EAT";
+    Activity[Activity["CUDDLE"] = 2] = "CUDDLE";
+    Activity[Activity["PROTEST"] = 3] = "PROTEST";
+})(Activity || (Activity = {}));
 var cat = {
     name: 'Lithy',
     age: 9,
@@ -5,8 +12,9 @@ var cat = {
     meals: [3, 'Purina']
 };
 console.log(cat);
+console.log('enum value', Activity.SLEEP); // logs enumerated value of 0
 // an example benefit of nkowing an array is all of one type is TS can then provide
-// many methods (eg: toUpperCase() ), as TS is expecting all elements of a strin arrayy to be strings
+// many methods (eg: toUpperCase() ), as TS is expecting all elements of a string arrayy to be strings
 // eg:
 console.log(cat.likes.map(function (like) {
     return like.toUpperCase();
