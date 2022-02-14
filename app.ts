@@ -1,17 +1,32 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  if (showResult) {
-    console.log(`${phrase} ${n1 + n2}`);
-  } else {
-    return n1 + n2;
-  }
-}
+const cat: {
+  name: string;
+  age: number;
+  likes: string[];
+  meals: [number, string]; // << TS can define and specicfy a Tuple
+} = {
+  name: 'Lithy',
+  age: 9,
+  likes: ['tuna', 'sitting in front of the laptop screen'], // TS infers an array of strings eg: string[]
+  meals: [3, 'Purina']
+};
 
-// const number1 = '5'; throws TS warning errors
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result is: ';
+console.log(cat);
 
-const result = add(number1, number2, printResult, resultPhrase);
+// an example benefit of nkowing an array is all of one type is TS can then provide
+// many methods (eg: toUpperCase() ), as TS is expecting all elements of a strin arrayy to be strings
+// eg:
+console.log(
+  cat.likes.map(like => {
+    return like.toUpperCase();
+  })
+);
 
-console.log(result);
+// object types - TS infers the type of data in an 'Object Type'
+// infered by TS (NOTICE THE SEMICOLONS, it is NOT an object)
+
+//const cat = {
+//   name: string;
+//   age: number;
+// };
+
+// if needing an array of a mix of strings and numbers, use: any[]
