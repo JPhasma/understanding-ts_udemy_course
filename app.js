@@ -1,9 +1,10 @@
 var Activity;
 (function (Activity) {
-    Activity[Activity["SLEEP"] = 0] = "SLEEP";
-    Activity[Activity["EAT"] = 1] = "EAT";
-    Activity[Activity["CUDDLE"] = 2] = "CUDDLE";
-    Activity[Activity["PROTEST"] = 3] = "PROTEST";
+    Activity[Activity["SLEEP"] = 7] = "SLEEP";
+    Activity[Activity["EAT"] = 19] = "EAT";
+    Activity[Activity["CUDDLE"] = 1000] = "CUDDLE";
+    Activity[Activity["PROTEST"] = 99999] = "PROTEST";
+    Activity["SUNBATHING"] = "Always"; // (even text values are possible if required)
 })(Activity || (Activity = {}));
 var cat = {
     name: 'Lithy',

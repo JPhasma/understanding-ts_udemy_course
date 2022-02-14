@@ -1,8 +1,9 @@
 enum Activity {
-  SLEEP,
-  EAT,
-  CUDDLE,
-  PROTEST
+  SLEEP = 7,
+  EAT = 19,
+  CUDDLE = 1000,
+  PROTEST = 99999, // enumeration numbers can be sequential or specified
+  SUNBATHING = 'Always' // (even text values are possible if required)
 }
 
 const cat: {
