@@ -17,7 +17,7 @@ function printResults(num: number): void {
 printResults(add(27, 9));
 
 //  Function types
-// 'Function types dfine the parameters and return type of a funcion'
+// 'Function types define the parameters and return type of a funcion'
 
 // TS can define that a variable name is a function,
 // and what values can be passed in and what value type is return
