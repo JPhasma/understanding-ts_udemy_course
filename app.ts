@@ -1,31 +1,22 @@
-// functions have a return type eg: number
-// this is either infered by TS or can be defined
+// more info here
 
-// eg: must only return numbers
-function add(n1: number, n2: number): number {
-  return n1 + n2;
-}
+// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 
-// for a function that does not return a value
-// the type 'void' is infered or can be defined
+// Watch mode for a file
+// eg: tsc app.ts --watch or -w
+// nb: quit with Ctrl C
 
-// eg:
-function printResults(num: number): void {
-  console.log('Results: ' + num); // << there is no return here
-}
+// to watch a whole project (only need to do once)
+// eg: tsc --init
 
-printResults(add(27, 9));
+// whole project in the directory is now managed by TS
+// creates a tsconfig.json file for additional config
 
-//  Function types
-// 'Function types define the parameters and return type of a funcion'
+// then run tsc -w to auto compile any saved .ts files
 
-// TS can define that a variable name is a function,
-// and what values can be passed in and what value type is return
-// eg:
+// eg: be sure to exclude node_modules, and place these at the bottom of the
+// tsconfig.json file, but before the last'}' eg:
 
-let combineValue: (a: number, b: number) => number;
-// the abover specifies that the variable can only be a function
-// that accepts two number values and return only a number
-
-// so, pointing 'combineValues' to 'printResults' would throw a TS error
-// TS does not like this >>:  combineValue = printResults;
+// "exclude": [
+//   "node_modules"
+// ]
