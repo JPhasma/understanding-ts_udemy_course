@@ -1,11 +1,12 @@
-// Union types
+// type aliases
+type Combinable = number | string; // << union type
+type ConversionDescriptor = 'as-number' | 'as-text'; // << literal type
 
+// union types and literal types often used together
 function combine(
-  n1: number | string, // << union types
-  n2: number | string,
-  resultConversion: 'as-number' | 'as-text' // << literal type
-
-  // union types and literal types often used together
+  n1: Combinable,
+  n2: Combinable,
+  resultConversion: ConversionDescriptor
 ) {
   let result;
   if (

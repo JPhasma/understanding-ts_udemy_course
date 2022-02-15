@@ -1,7 +1,5 @@
-// Union types
-function combine(n1, // << union types
-n2, resultConversion // << literal type
-) {
+// union types and literal types often used together
+function combine(n1, n2, resultConversion) {
     var result;
     if ((typeof n1 === 'number' && typeof n2 === 'number') ||
         resultConversion === 'as-number') {
